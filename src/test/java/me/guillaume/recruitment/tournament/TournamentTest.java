@@ -7,18 +7,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
+ * This is a duel simulation system.
  *
- * This is a duel simulation
- *
- * Blow exchange are sequential, A engage B means that A will give the first blow, then B will respond
- *
+ * Combat exchanges are sequential: when A engages B, A delivers the first blow, then B responds.
  */
 public class TournamentTest {
 
 
     /**
-     * A Swordsman has 100 hit points and use a 1 hand sword that does 5 dmg
-     * A Viking has 120 hit points and use a 1 hand axe that does 6 dmg
+     * A Swordsman has 100 hit points (health) and uses a one-handed sword that deals 5 damage per blow (points per strike).
+     * A Viking has 120 hit points (health) and uses a one-handed axe that deals 6 damage per blow (points per strike).
      */
     @Test
     public void SwordsmanVsViking() {
@@ -35,8 +33,8 @@ public class TournamentTest {
     }
 
     /**
-     * a buckler cancel all the damages of a blow one time out of two
-     * a buckler is destroyed after blocking 3 blow from an axe
+     * A buckler cancels all damage from a blow every other time (one time out of two).
+     * A buckler is destroyed after blocking 3 blows from an axe.
      */
     @Test
     public void SwordsmanWithBucklerVsVikingWithBuckler() {
@@ -55,9 +53,9 @@ public class TournamentTest {
     }
 
     /**
-     * an Highlander as 150 hit points and fight with a Great Sword
-     * a Great Sword is a two handed sword deliver 12 damages, but can attack only 2 every 3
-     * an armor : reduce all received damages by 3 & reduce delivered damages by one
+     * A Highlander has 150 hit points (health) and fights with a Great Sword.
+     * A Great Sword is a two-handed weapon that delivers 12 damage (points per strike), but can only attack 2 out of every 3 rounds.
+     * Armor reduces all received damage by 3 points and reduces delivered damage by 1 point.
      */
     @Test
     public void ArmoredSwordsmanVsViking() {
@@ -76,10 +74,10 @@ public class TournamentTest {
     }
 
     /**
-     * a vicious Swordsman is a Swordsman that put poison on his weapon.
-     * poison add 20 damages on two first blows
-     * a veteran Highlander goes Berserk once his hit points are under 30% of his initial total
-     * once Berserk, he doubles his damages
+     * A vicious Swordsman is a Swordsman who applies poison to his weapon.
+     * Poison adds 20 additional damage (points per strike) to the first two blows only.
+     * A veteran Highlander goes Berserk once his hit points (health) drop below 30% of his initial total.
+     * Once Berserk, he doubles his damage output.
      */
     @Test // Bonus points :D
     public void ViciousSwordsmanVsVeteranHighlander() {
