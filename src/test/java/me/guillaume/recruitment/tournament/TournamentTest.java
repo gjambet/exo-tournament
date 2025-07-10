@@ -58,7 +58,7 @@ public class TournamentTest {
      * Armor reduces all received damage by 3 points and reduces delivered damage by 1 point.
      */
     @Test
-    public void ArmoredSwordsmanVsViking() {
+    public void ArmoredSwordsmanVsHighlander() {
 
         Highlander highlander = new Highlander();
 
